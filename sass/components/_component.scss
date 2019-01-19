@@ -1,0 +1,125 @@
+//flex component---------------------
+@mixin flex-align($justify-content, $align-items) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    @content;
+} 
+//-----------------------------------
+
+//Padding body top-------------------
+.body-padding-top {
+    padding-top: 52px;
+}
+//-----------------------------------
+
+//none margin component--------------
+.margin-padding-none {
+    margin: 0;
+    padding:0 ;
+}
+//----------------------------------
+
+//align center Flex Component-------
+.flex-items {
+    display: flex;
+    align-items: center;
+}
+//----------------------------------
+
+//Mixin:before icons component------
+@mixin before {
+    content: "|";
+    color: #3B5CA0;
+    font-size: 24px;
+    margin-right: 8px;
+}
+//---------------------------------
+
+//User img component---------------
+@mixin component_img($width, $height, $br) {
+    width: $width;
+    height: $height;
+    border-radius: $br;
+    @content;
+}
+//---------------------------------
+
+//headers component align ---------
+.headers {
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+//----------------------------------
+
+//templates size--------------------
+@mixin main_template($height, $width) {
+    border: 1px solid #D9D9D9;
+    height: $height;
+    $width: $width;
+    background-color: $Color-white;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    @content;
+}
+//----------------------------------
+
+//each template user img component--
+@mixin header_small_img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+//----------------------------------
+
+//PostHeader_of_the_section---------
+@mixin postHeader {
+    justify-content: space-between;
+    display: flex;
+    padding: 15px;
+    @content;
+}
+//----------------------------------
+
+//text_near_the_small_img-----------
+@mixin figcaptionContainer {
+flex-direction: column;
+display: flex;
+padding: 6px 10px;
+& > .figcaption-item1 {
+    font-size: 15px;
+    font-weight: 600;    
+    color: #365899;
+    cursor: pointer;
+    }
+}
+//----------------------------------
+
+//Big_Img_Section-------------------
+@mixin ImgPostReview($margin, $width) {
+    border: 1px solid #D9D9D9;
+    width: $width;
+    margin: $margin;
+    box-shadow: 0px 1px 2px -2px rgba(0, 0, 0, 0.75);
+    @content;
+}
+//----------------------------------
+
+//Like&Comment_Section--------------
+@mixin postCommentsContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+}
+//----------------------------------
+
+//LinksArea-------------------------
+@mixin post_comment {
+    padding: 12px 0;
+    margin: auto 10px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #D9D9D9;
+    @content;
+}
+//----------------------------------

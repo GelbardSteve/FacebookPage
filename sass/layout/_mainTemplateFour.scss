@@ -1,0 +1,51 @@
+.private-post {
+    @include main_template(247px, 100%);
+}
+
+.post-comments-bottom {
+    border-top: 1px solid #D9D9D9;
+    padding: 12px;
+    margin: auto 10px;
+    @include flex-align(space-around, null);
+    & > a {
+        color: #5F636A;
+    }
+}
+
+.post-title-privat {
+    color: black;
+    font-size: 25px;
+    padding: 10px;
+    text-align: right;
+}
+
+.post-comment-container {
+    border-top: 1px solid #D9D9D9;
+    padding: 12px;
+    margin: auto 10px;
+    @include  flex-align(space-between, center);
+}
+
+.post-comments-four {
+    @include flex-align(null, center);
+    & > a > img {
+        height: 22px;
+        width: 22px;
+    } 
+}
+
+.reactions-num {
+    margin-left: 15px;
+}
+
+.icons1 {
+    z-index: 2;
+    margin-right: -7px;
+}
+.icons2 {
+    z-index: 1;
+}
+
+.icons3 {
+    margin-left: -6px;
+}

@@ -1,0 +1,58 @@
+.nav-container {
+    grid-column: 1/3;
+    max-width: 161px;
+}
+
+.navbar-links, 
+.nav-container {
+    @include flex-align(null, null);
+}
+
+.section-container {
+    max-width: 1020px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 150px 53% 30%;
+    grid-gap: 10px;
+}
+
+.nav-container {
+    @include flex-align(center, null);
+    grid-column: 1/3;
+    font-size: 13px;
+    flex-direction: column;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+}
+
+.userpic {
+    @include component_img(23px, 23px, 50%);
+}
+
+.nav-item {
+    padding: 3px;
+    & > img {
+        @include component_img(23px, 23px, 50%);
+    }
+}
+
+.navbar-links {
+    flex-direction: column;
+}
+
+.navbar-item > img {
+    width: 25px;
+    height: 25px;
+}
+
+.nav-text {
+    display: inline-block;
+    margin-left: 2px;
+    max-width: 126px;
+    overflow: hidden;
+    padding-left: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-bottom: 4px;
+}

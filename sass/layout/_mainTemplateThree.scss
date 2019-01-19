@@ -1,0 +1,42 @@
+.post-body1 > p, h1, h2, h3, h4 {
+    margin: 0;
+}
+
+.third-post-template {
+    @include main_template(auto, 100%);
+}
+
+.post-title-left {
+    padding: 10px;
+} 
+
+.post-preview-video {
+    @include ImgPostReview(auto, 95%);
+    & > video {
+        width: 100%;
+        height: 286px;
+    }
+}
+
+.public-post-follow {
+    @include  flex-align(space-between, null);
+    padding: 10px;
+}
+
+.post-comments-video {
+    position: relative;
+    @include post_comment;
+    & > a > img {
+        height: 22px;
+        width: 22px;
+    }
+}
+
+.post_comments_video > a {
+    color: #5F636A;
+}
+.download {
+    position: absolute;
+    left: 0;
+    top: 9px;
+}

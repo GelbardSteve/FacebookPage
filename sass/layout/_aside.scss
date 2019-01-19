@@ -1,0 +1,163 @@
+.aside-container {
+    grid-column: 3/3;
+    width: 306px;
+}
+
+//first section start------------------------------------------------------------------
+.aside-first-container {
+    @include main_template(116px, 100%);
+}
+
+.aside-post-header {
+    @include flex-align(space-between, null);
+    padding: 15px 15px 0 15px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.aside-section {
+    padding: 8px 0px 0px 12px;
+    @include flex-align(null, center);
+}
+
+//"+" -> Make it with border ------------
+.aside-section > .fa-plus {
+    cursor: pointer;
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    padding: 18px;
+    background-color: #F5F6F7;
+    color: #187BFB;
+}
+//---------------------------------------
+
+.aside-story {
+    @include figcaptionContainer;
+}
+
+//first section done------------------------------------------------------------------------
+
+//suggest section start---------------------------------------------------------------------
+.aside-suggested-template {
+        @include main_template(auto, 100%);
+}
+
+.aside-suggested-container {
+    @include flex-align(space-between, center);
+    padding: 8px 12px 0 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.suggested-body {
+    @include ImgPostReview(10px, null) {
+        height: 311px;
+    }
+}
+
+.aside-suggested-text1 {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px;
+    color: #5F636A;
+}
+
+.aside-suggested-text2 {
+    font-size: 14px;
+    font-weight: initial;
+}
+
+.sug-page-rating {
+    padding: 8px;
+    border-bottom: 1px solid #D9D9D9;
+    color: #4267B2;
+    & > .fa-star{
+        font-size: 10px;
+    }
+}
+
+.sug-page-info {
+    @include flex-align(null, null);
+    & > img {
+        width: 53px;
+        height: 53px;
+        margin: 8px;
+    }
+}
+
+.stories-info-header { 
+    color: #365899;
+    cursor: pointer;
+}
+
+.stories-info-descr {
+    font-size: 13px;
+    color: #AFB2B8;
+}
+
+.zoo-color-blue {
+    padding-top: 8px;
+    color: #365899;
+    cursor: pointer;
+}
+
+.zoo-img {
+    width: 100%;
+}
+
+.asid-like {
+    @include flex-align(center, null);
+    height: auto;
+    padding: 13px;
+}
+
+//suggest section end---------------------------------------------------------------------
+
+//language section start------------------------------------------------------------------
+.language-template {
+    @include main_template(58px, 100%);
+}
+
+.language-template {
+    @include flex-align(space-between, center);
+    padding: 16px 12px;
+    & > .fa-plus {
+        @include flex-align(null, center);
+        height: 36px;
+        border-radius: 10px;
+        border: 1px solid #D9D9D9;
+        padding: 12px;
+        background-color: #F5F6F7;
+        cursor: pointer;
+    }
+}
+
+.descr-text {
+    font-size: 13px;
+    color: #AFB2B8;
+    line-height: 1.4;
+    & > ::after {
+    content: '\00B7';
+    padding: 2px;
+    }
+}
+
+@for $i from 1 through 3 {
+    .color-blue-#{$i}{
+        color: #365899;
+        cursor: pointer; 
+        font-size: 13px; 
+        &::after {
+            content: '\00B7';
+            padding: 2px;
+        }
+    }
+}
+
+.color-blue {
+    color: #365899;
+    cursor: pointer;
+    font-size: 13px; 
+}
+
+//language section end------------------------------------------------------------------
