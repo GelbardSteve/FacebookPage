@@ -25,7 +25,7 @@
 
 .post-comments-video {
     position: relative;
-    @include post_comment;
+    @include post-comment;
     & > a > img {
         height: 22px;
         width: 22px;
