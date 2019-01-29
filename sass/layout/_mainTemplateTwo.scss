@@ -74,7 +74,7 @@
 
 .post-comments-bottom {
     position: relative;
-    @include post_comment;
+    @include post-comment;
     & > a {
         color: #5F636A;
     }
